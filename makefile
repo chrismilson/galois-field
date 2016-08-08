@@ -11,7 +11,8 @@ objects: $(SOURCE)
 clean:
 	rm -rf ./object/
 
-test: objects
-	$(CC) $(OBJECT) test.cpp -o test
+test:
+	$(CC) $(SOURCE) test.cpp -o test
 	./test
 	rm -f test
+	rm -f object/test.o

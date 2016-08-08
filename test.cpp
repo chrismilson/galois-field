@@ -3,7 +3,7 @@
 using namespace std;
 
 int main(int argc, char const *argv[]) {
-  Field test1(7), test2(8);
+  Field test1(7), test2(7);
   test1 = 5;
   test2 = 2;
 
