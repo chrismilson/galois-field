@@ -22,7 +22,7 @@ void Field::operator=(int v) {
 }
 
 Field Field::operator+(Field rhs) {
-  if (rhs.getCha() != cha) throw IncompatibleFieldException;
+  if (rhs.getCha() != cha) throw IncompatibleField();
   Field sum(cha);
   sum = val + rhs;
   return sum;

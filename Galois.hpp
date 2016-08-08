@@ -20,6 +20,6 @@ class IncompatibleField: public std::exception {
   virtual const char* what() const throw() {
     return "Fields must be of the same order.";
   }
-} IncompatibleFieldException;
+};
 
 #endif
