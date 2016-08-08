@@ -1,6 +1,29 @@
 #include "Galois.hpp"
 
-Field::Field() {
+Field::Field(int c) {
   val = 0;
-  cha = 10;
+  if (c < 0) c *= -1;
+  cha = c;
+}
+
+int Field::getCha() {
+  return cha;
+}
+
+Field::operator int() const {
+  return val;
+}
+
+void Field::operator=(int v) {
+  while (v < 0) {
+    v += cha;
+  }
+  val = v % cha;
+}
+
+Field Field::operator+(Field rhs) {
+  if (rhs.getCha() != cha) throw IncompatibleFieldException;
+  Field sum(cha);
+  sum = val + rhs;
+  return sum;
 }
