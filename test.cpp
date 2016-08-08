@@ -3,12 +3,12 @@
 using namespace std;
 
 int main(int argc, char const *argv[]) {
-  Field test1(7), test2(8);
-  test1 = 5;
-  test2 = 2;
+  Field test1(7), test2(7);
+  test1 = 7;
+  test2 = 5;
 
-  int sum = test1 + test2;
-  cout << "5 + 2 = " << sum << endl;
+
+  cout << "test1 = " << test1-- << endl;
 
   return 0;
 }

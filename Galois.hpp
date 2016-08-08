@@ -13,7 +13,15 @@ public:
   int getCha();
   operator int() const;
   void operator=(int);
+  Field operator+(int);
   Field operator+(Field);
+  Field operator++();
+  Field operator++(int);
+  Field operator-();
+  Field operator-(int);
+  Field operator-(Field);
+  Field operator--();
+  Field operator--(int);
 };
 
 class IncompatibleField: public std::exception {
