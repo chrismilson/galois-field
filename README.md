@@ -5,6 +5,10 @@ The purpose of this project is to be a support class for manipulating codes for 
 
 ## Install
 
-Just do make to get the object file, however the recommended use is to take the source and use it like a library in other programs.
+Just do make to get the object file.
+The recommended use however is to take the source and use it like a library in other programs.
 
-Modify the test.cpp file to play around with, it alrady has some explanation of the functions but feel free to change it.
+
+You can do make test to get a brief description of the class.
+
+Modify the test.cpp file to play around, it alrady has some explanation of the functions but feel free to change it.
