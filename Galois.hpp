@@ -39,6 +39,10 @@ public:
   Field operator*(Field);
   Field operator*=(int);
   Field operator*=(Field);
+
+  Field operator/(Field);
+  Field operator/=(Field);
+  Field inv();
 };
 
 class IncompatibleField: public std::exception {

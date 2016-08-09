@@ -164,3 +164,34 @@ Field Field::operator*=(Field v) {
   if (val < 0) val += cha;
   return *this;
 }
+
+Field Field::operator/(Field v) {
+  if (v.getCha() != cha) throw IncompatibleField();
+  Field quotient(cha);
+  int inverseV = 0;
+  while (inverseV++ != cha) {
+    if ((inverseV * v) % cha == 1) break;
+  }
+  quotient = inverseV * val;
+  return quotient;
+}
+
+Field Field::operator/=(Field v) {
+  if (v.getCha() != cha) throw IncompatibleField();
+  int inverseV = 0;
+  while (inverseV++ != cha) {
+    if ((inverseV * v) % cha == 1) break;
+  }
+  val *= inverseV;
+  return *this;
+}
+
+Field Field::inv() {
+  Field quotient(cha);
+  int inverseV = 0;
+  while (inverseV++ != cha) {
+    if ((inverseV * val) % cha == 1) break;
+  }
+  quotient = inverseV;
+  return quotient;
+}
